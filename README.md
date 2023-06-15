@@ -1,11 +1,33 @@
-# Digital Clock
+# Flutter Clock Helper
 
-This app is an example of a digital clock.
-It has a light theme and a dark theme.
-See the [Analog Clock](../analog_clock) if you'd like an example that displays the weather and location.
+This package provides scaffolding code for the clock in the Flutter Clock contest.
 
-<img src='digital.gif' width='350'>
+Contestants: Do not edit this code.
 
-<img src='digital_dark.png' width='350'>
 
-<img src='digital_light.png' width='350'>
+## Model
+Provides data that can change in the clock. Look in model.dart for more details.
+
+ * Time format (12- or 24-hour)
+ * Location
+ * Temperature
+ * Temperature high
+ * Temperature low
+ * Temperature unit
+ * Weather unit
+
+
+## Clock Customizer
+Provides customizations for your clock (based on the model).
+You can change the behavior of your clock based on these customizations.
+
+<img src='customizer.png' width='350'>
+
+To use inside your app's `main.dart`:
+
+```
+  runApp(ClockCustomizer((ClockModel model) => AnalogClock(model)));
+```
+
+For more information, see the code inside [lib/](lib).
+For a full example, see the [Analog Clock](../analog_clock) or [Digital Clock](../digital_clock) in this GitHub repo.
